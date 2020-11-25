@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stack>
 
 using namespace std;
 
@@ -12,6 +13,17 @@ class Card{
         Card(int v, string s);
         int getValue();
         string getSuit();
+};
+
+class Deck{
+    private:
+        string<Card> orderedDeck[52];
+    public:
+        stack<Card> shuffledDeck[52];
+        
+        Deck();
+
+        Card drawCard();
 };
 
 Card::Card(int v, string s){
@@ -27,3 +39,10 @@ string Card::getValue(){
     return suit;
 }
 
+Deck::Deck(){
+    
+}
+
+Card Deck::drawCard(){
+    return shuffledDeck.pop();
+}
