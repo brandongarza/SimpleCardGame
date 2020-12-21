@@ -32,11 +32,11 @@ Card::Card(int v, string s){
 }
 
 int Card::getSuit(){
-    return value;
+    return suit;
 }
 
 string Card::getValue(){
-    return suit;
+    return value;
 }
 
 Deck::Deck(){
