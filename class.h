@@ -17,9 +17,9 @@ class Card{
 
 class Deck{
     private:
-        string<Card> orderedDeck[52];
+        Card orderedDeck[52];
     public:
-        stack<Card> shuffledDeck[52];
+        stack<Card> shuffledDeck;
         
         Deck();
 
@@ -31,18 +31,18 @@ Card::Card(int v, string s){
     suit.assign(s);
 }
 
-int Card::getSuit(){
+string Card::getSuit(){
     return suit;
 }
 
-string Card::getValue(){
+int Card::getValue(){
     return value;
 }
 
-Deck::Deck(){
+// Deck::Deck(){
     
-}
+// }
 
-Card Deck::drawCard(){
-    return shuffledDeck.pop();
-}
+// Card Deck::drawCard(){
+//     return shuffledDeck.pop();
+// }
